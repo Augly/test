@@ -1,0 +1,31 @@
+<!--pages/result/result.wxml-->
+<!-- <image src='../../utils/image/bj.jpg' class='bg' style='height:{{allheight}}px'></image>
+<image src='../../utils/image/result.jpg' class='banner'></image>
+<view class='zs'>
+  <view class='zsList'>
+    <view class='name'>CMA</view>
+    <view class='other'>
+        <view class='otherLeft'>
+         <view class='yellow'></view>
+          <view class='green'></view>
+        </view>
+        <image src='../../utils/image/sut.png' class='flower'></image>
+    </view>
+  </view>
+   <view class='zsList'>
+  
+  </view>
+   <view class='zsList other'>
+  
+  </view>
+</view> -->
+
+
+<canvas canvas-id="myCanvas" style="width:100%;box-sizing:border-box;height:{{systemInfo.windowHeight}}px;" />
+<button>111</button>
+<view class='footbottom'>
+<button>111</button>
+  <!-- <image class='shareFriend' src='https://tenement.wx.bronet.cn/public/images/flogo.jpg'></image>
+  <image class='shareFriend' src='https://tenement.wx.bronet.cn/public/images/flogo.jpg'></image>
+  <image class='shareFriend' src='https://tenement.wx.bronet.cn/public/images/flogo.jpg' bindtap='sava'></image> -->
+</view>

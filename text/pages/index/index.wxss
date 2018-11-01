@@ -1,0 +1,75 @@
+.banner {
+  width: 750rpx;
+  height: 365rpx;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.foot {
+  width: 750rpx;
+  height: 98rpx;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+.main {
+  position: absolute;
+  top: 365rpx;
+  box-sizing: border-box;
+  padding: 10rpx 52rpx;
+}
+
+.mainWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list {
+  position: relative;
+  text-align: center;
+  width: 295rpx;
+  height: 65rpx;
+  background: rgba(40, 98, 171, 1);
+  border-radius: 7rpx;
+  line-height: 65rpx;
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 32rpx;
+}
+
+.selected {
+  width: 42rpx;
+  height: 42rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 0rpx 0rpx 7rpx 0rpx;
+}
+
+.title {
+  font-size: 26rpx;
+  color: rgba(51, 51, 51, 1);
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 258rpx;
+  height: 70rpx;
+  border: 2rpx solid rgba(56, 110, 194, 1);
+  border-radius: 35rpx;
+  text-align: center;
+  font-size: 35rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color: rgba(56, 110, 194, 1);
+  margin: 0 auto;
+  margin-top: 37rpx;
+}
