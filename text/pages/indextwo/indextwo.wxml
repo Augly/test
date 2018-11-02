@@ -1,4 +1,5 @@
-<canvas canvas-id="myCanvas" wx-if="{{isShow}}" style="width:100%;box-sizing:border-box;height:{{systemInfo.windowHeight}}px;" />
+<canvas canvas-id="myCanvas" id='myCanvas'  style="width:100%;box-sizing:border-box;height:{{systemInfo.windowHeight}}px;" />
+<view wx:if="{{isShow}}">
 <image class='banner' src='../../utils/image/banner.jpg'></image>
 <view class='main' style="width:100%;height:{{mainHeight}}px;">
   <view class='mainWrap'>
@@ -8,6 +9,10 @@
     </view>
   </view>
   <view class='title'>选择你就业的年限</view>
-  <view class='next' bindtap='next'>一键分析并保存截图</view>
+  <view class='next' bindtap='next'>一键分析</view>
 </view>
 <image class='foot' src='../../utils/image/foot_bg.png'></image>
+</view>
+
+<cover-view class='save' wx:if="{{!isShow}}" bindtap='save'>{{savatext}}</cover-view>
+<cover-view class='erweima' wx:if="{{!isShow}}" bindtap='erweima'>{{savatext}}</cover-view>

@@ -80,6 +80,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '一键分析本命证书',
+      path: '/page/index/index'
+    }
   }
 })

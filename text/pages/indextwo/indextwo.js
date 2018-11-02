@@ -8,9 +8,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    savatext:'保存图片',
     mainHeight: 0,
     selectIndex: 0,
-    isShow:true,
+    isShow: true,
     list: ['1-3年', '3-5年', '5-7年', '7-10年', '10-15年', '15年以上'],
     imglist: [
       'https://fapiao.gaodun.com/Public/cma/jiang_1.png', //奖状形状1
@@ -72,40 +73,39 @@ Page({
     wx.showLoading({
       title: '正在计算',
       mask: true,
-      success: function (res) {},
-      fail: function (res) {},
-      complete: function (res) {},
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
-    console.log(this.data.result, app.globalData.one, app.globalData.two)
     let result = []
     if (this.data.result[0] == '会计/助理会计/出纳' && this.data.result[1] == '1-3年') {
       result = [{
-          title: '初级会计职称',
-          main: '会计职称是衡量个人会计业务水平高低的标准，会计职称越高，表明你会计业务水平越高。现有会计职称：初级、中级和高级，证书全国范围内有效。'
-        }, {
-          title: 'ACCA',
-          main: 'ACCA在国内称为"国际注册会计师"，被认为是"国际财会界的通行证"。许多国家立法许可ACCA会员从事审计、投资顾问和破产执行工作。'
+        title: '初级会计职称',
+        main: '会计职称是衡量个人会计业务水平高低的标准，会计职称越高，表明你会计业务水平越高。现有会计职称：初级、中级和高级，证书全国范围内有效。'
+      }, {
+        title: 'ACCA',
+        main: 'ACCA在国内称为"国际注册会计师"，被认为是"国际财会界的通行证"。许多国家立法许可ACCA会员从事审计、投资顾问和破产执行工作。'
 
-        },
-        {
-          title: 'CMA',
-          main: 'CMA即美国注册管理会计师，是美国管理会计师协会（IMA）旗下的注册管理会计师认证（CMA认证），同时被誉为财会界的Mini-MBA及美国财会领域的三大黄金认证之一，在全球范围内被企业财务高管所认可。'
+      },
+      {
+        title: 'CMA',
+        main: 'CMA即美国注册管理会计师，是美国管理会计师协会（IMA）旗下的注册管理会计师认证（CMA认证），同时被誉为财会界的Mini-MBA及美国财会领域的三大黄金认证之一，在全球范围内被企业财务高管所认可。'
 
-        }
+      }
 
       ]
     } else if (this.data.result[0] == '审计员/主管' && this.data.result[1] == '1-3年') {
       result = [{
-          title: '中级会计职称',
-          main: '会计职称是衡量个人会计业务水平高低的标准，会计职称越高，表明你会计业务水平越高。现有会计职称：初级、中级和高级，证书全国范围内有效。'
-        }, {
-          title: '审计师',
-          main: '审计师是专门从事检查并进一步证实公司会计账目和报告的正确性、 合理性和可接受性的专业人员'
-        },
-        {
-          title: 'CPA',
-          main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
-        }
+        title: '中级会计职称',
+        main: '会计职称是衡量个人会计业务水平高低的标准，会计职称越高，表明你会计业务水平越高。现有会计职称：初级、中级和高级，证书全国范围内有效。'
+      }, {
+        title: '审计师',
+        main: '审计师是专门从事检查并进一步证实公司会计账目和报告的正确性、 合理性和可接受性的专业人员'
+      },
+      {
+        title: 'CPA',
+        main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
+      }
 
       ]
     } else if (this.data.result[0] == '财务主管/经理' && this.data.result[1] == '1-3年') {
@@ -192,17 +192,17 @@ Page({
       }]
     } else if (this.data.result[0] == '审计员/主管' && this.data.result[1] == '3-5年') {
       result = [{
-          title: 'USCPA',
-          main: 'USCPA是IFRS时代世界通行证。可在全球范围内与多国的注册会计师体系完成互认。（加拿大、英国、中国香港、新西兰、澳大利亚、爱尔兰等）'
-        }, {
-          title: '审计师',
-          main: '审计师是专门从事检查并进一步证实公司会计账目和报告的正确性、 合理性和可接受性的专业人员 '
-        },
-        {
-          title: 'CPA',
-          main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
+        title: 'USCPA',
+        main: 'USCPA是IFRS时代世界通行证。可在全球范围内与多国的注册会计师体系完成互认。（加拿大、英国、中国香港、新西兰、澳大利亚、爱尔兰等）'
+      }, {
+        title: '审计师',
+        main: '审计师是专门从事检查并进一步证实公司会计账目和报告的正确性、 合理性和可接受性的专业人员 '
+      },
+      {
+        title: 'CPA',
+        main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
 
-        }
+      }
 
       ]
     } else if (this.data.result[0] == '财务主管/经理' && this.data.result[1] == '3-5年') {
@@ -295,18 +295,18 @@ Page({
       }]
     } else if (this.data.result[0] == '审计员/主管' && this.data.result[1] == '5-7年') {
       result = [{
-          title: '经济师',
-          main: '经济师，是我国职称之一，设两个级别：经济专业初级资格、经济专业中级资格。参加考试并成绩合格者，获得相应级别的专业技术资格，由人事部统一发放合格证书。'
+        title: '经济师',
+        main: '经济师，是我国职称之一，设两个级别：经济专业初级资格、经济专业中级资格。参加考试并成绩合格者，获得相应级别的专业技术资格，由人事部统一发放合格证书。'
 
-        }, {
-          title: '审计师',
-          main: '审计师是专门从事检查并进一步证实公司会计账目和报告的正确性、合理性和可接受性的专业人员'
+      }, {
+        title: '审计师',
+        main: '审计师是专门从事检查并进一步证实公司会计账目和报告的正确性、合理性和可接受性的专业人员'
 
-        },
-        {
-          title: 'CPA',
-          main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
-        }
+      },
+      {
+        title: 'CPA',
+        main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
+      }
 
       ]
     } else if (this.data.result[0] == '财务主管/经理' && this.data.result[1] == '5-7年') {
@@ -339,8 +339,8 @@ Page({
         main: 'CMA即美国注册管理会计师，是美国管理会计师协会（IMA）旗下的注册管理会计师认证（CMA认证），同时被誉为财会界的Mini-MBA及美国财会领域的三大黄金认证之一，在全球范围内被企业财务高管所认可。'
 
       }, {
-        title: 'ACCA',
-        main: 'ACCA在国内称为"国际注册会计师"，被认为是"国际财会界的通行证"。许多国家立法许可ACCA会员从事审计、投资顾问和破产执行工作。'
+          title: 'USCPA',
+          main: 'USCPA是IFRS时代世界通行证。可在全球范围内与多国的注册会计师体系完成互认。（加拿大、英国、中国香港、新西兰、澳大利亚、爱尔兰等）'
       }, {
         title: 'CPA',
         main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
@@ -410,19 +410,19 @@ Page({
       }]
     } else if (this.data.result[0] == '审计员/主管' && this.data.result[1] == '7-10年') {
       result = [{
-          title: '经济师',
-          main: '经济师，是我国职称之一，设两个级别：经济专业初级资格、经济专业中级资格。参加考试并成绩合格者，获得相应级别的专业技术资格，由人事部统一发放合格证书。'
+        title: '经济师',
+        main: '经济师，是我国职称之一，设两个级别：经济专业初级资格、经济专业中级资格。参加考试并成绩合格者，获得相应级别的专业技术资格，由人事部统一发放合格证书。'
 
-        }, {
-          title: 'CMA',
-          main: 'CMA即美国注册管理会计师，是美国管理会计师协会（IMA）旗下的注册管理会计师认证（CMA认证），同时被誉为财会界的Mini-MBA及美国财会领域的三大黄金认证之一，在全球范围内被企业财务高管所认可。'
+      }, {
+        title: 'CMA',
+        main: 'CMA即美国注册管理会计师，是美国管理会计师协会（IMA）旗下的注册管理会计师认证（CMA认证），同时被誉为财会界的Mini-MBA及美国财会领域的三大黄金认证之一，在全球范围内被企业财务高管所认可。'
 
-        },
-        {
-          title: 'CPA',
-          main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
+      },
+      {
+        title: 'CPA',
+        main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
 
-        }
+      }
 
       ]
     } else if (this.data.result[0] == '财务主管/经理' && this.data.result[1] == '7-10年') {
@@ -495,15 +495,15 @@ Page({
       }]
     } else if (this.data.result[0] == '审计员/主管' && this.data.result[1] == '10-15年') {
       result = [{
-          title: 'USCPA',
-          main: 'USCPA是IFRS时代世界通行证。可在全球范围内与多国的注册会计师体系完成互认。（加拿大、英国、中国香港、新西兰、澳大利亚、爱尔兰等）'
+        title: 'USCPA',
+        main: 'USCPA是IFRS时代世界通行证。可在全球范围内与多国的注册会计师体系完成互认。（加拿大、英国、中国香港、新西兰、澳大利亚、爱尔兰等）'
 
-        },
-        {
-          title: 'CPA',
-          main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
+      },
+      {
+        title: 'CPA',
+        main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
 
-        }
+      }
 
       ]
     } else if (this.data.result[0] == '财务主管/经理' && this.data.result[1] == '10-15年') {
@@ -587,14 +587,14 @@ Page({
       }]
     } else if (this.data.result[0] == '审计员/主管' && this.data.result[1] == '15年以上') {
       result = [{
-          title: '税务师',
-          main: '从事税务代理的专门人员，税务师资格的取得实行考试和认定制度，证书登记服务的具体工作由全国税务师行业协会负责。'
+        title: '税务师',
+        main: '从事税务代理的专门人员，税务师资格的取得实行考试和认定制度，证书登记服务的具体工作由全国税务师行业协会负责。'
 
-        },
-        {
-          title: 'CPA',
-          main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
-        }
+      },
+      {
+        title: 'CPA',
+        main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
+      }
 
       ]
     } else if (this.data.result[0] == '财务主管/经理' && this.data.result[1] == '15年以上') {
@@ -688,28 +688,17 @@ Page({
       resultlist: result
     })
     this.downImg(this.data.imglist)
-
-    // let newlist = this.downImg(this.data.imglist)
-    // console.log(newlist)
-
-    // wx.navigateTo({
-    //   url: '/pages/result/result',
-    // })
   },
 
   downImg(list) {
     var that = this
     let imglist = []
     let n = 0
-    console.log(list)
-
     function up() {
       wx.downloadFile({
         url: list[n],
         success(res) {
-          console.log(res)
           if (res.statusCode == 200) {
-            console.log(res.tempFilePath)
             imglist.push(res.tempFilePath)
             n++
             if (n == list.length) {
@@ -744,22 +733,44 @@ Page({
     ctx.setFillStyle('white')
     //绘制证书解析标题
     ctx.fillText('证书解析：', that.rem(32), that.rem(500))
-    ctx.save()
+    ctx.draw(true)
     that.forlist(that.data.resultlist, that, ctx)
   },
 
   forlist(list, that, ctx) {
     for (let t = 0; t < list.length; t++) {
-      console.log(list[t])
       that.drawtitle(ctx, list[t].title, t, that)
       that.tostringLength(list[t].title, t, list[t].main, 20, ctx, that)
     }
-    setTimeout(function () {
-      ctx.save()
-      ctx.draw()
-      
-     
+    ctx.draw(true)
+    wx.hideLoading()
+    that.setData({
+      isShow: false
+    })
+  },
+  erweima(){
+    wx.previewImage({
+      current: 'https://fapiao.gaodun.com/Public/cma/wx.png', // 当前显示图片的http链接
+      urls: ['https://fapiao.gaodun.com/Public/cma/wx.png'] // 需要预览的图片http链接列表
+    })
+  },
+  save(){
+    var that=this
+    if (that.data.savatext=='重新测试'){
+      wx.reLaunch({
+        url: '/pages/index/index'
+      })
+    }else{
 
+
+    wx.showLoading({
+      title: '正在保存...',
+      mask: true,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+    setTimeout(function () {
       wx.canvasToTempFilePath({
         x: 0,
         y: 0,
@@ -767,48 +778,41 @@ Page({
         height: that.data.systemInfo.screenHeight,
         canvasId: 'myCanvas',
         success: function (res) {
-          // that.setData({
-          //   isShow:false
-          // })
-          wx.hideLoading()
-          
-          // console.log(res.tempFilePath)
           app.globalData.imgurl = res.tempFilePath
-          // wx.navigateTo({
-          //   url: '/pages/result/result',
-          // })
           wx.saveImageToPhotosAlbum({
             filePath: res.tempFilePath,
             success(res) {
+              wx.hideLoading()
               wx.showToast({
                 title: '保存成功!',
                 icon: '',
                 image: '',
                 duration: 2000,
                 mask: true,
-                success: function(res) {},
-                fail: function(res) {},
-                complete: function(res) {},
+                success: function (res) { },
+                fail: function (res) { },
+                complete: function (res) { },
+              })
+              that.setData({
+                savatext:'重新测试'
               })
             },
             fail(res) {
-              console.log(res)
             },
             complete(res) {
-              console.log(res)
             }
           })
         }
       })
-    }, 1000)
-
+    }, 1500)
+    }
   },
   drawtitle(ctx, textmain, t, that) {
     //根据奖状的名字长度设置奖状样式
     ctx.drawImage(textmain.length > 3 ? that.data.newList[1] : that.data.newList[0], that.rem(60 + 219 * t), that.rem(200), that.rem(194), that.rem(132))
     ctx.setTextAlign('left')
     ctx.setFillStyle('#2862AB')
-    ctx.save()
+    ctx.draw(true)
     //字的展示形式
     if (textmain.length <= 3) {
       ctx.setFontSize(that.rem(55))
@@ -818,23 +822,19 @@ Page({
       ctx.fillText(textmain.substr(0, 4), that.rem(75 + 219 * t), that.rem(255), that.rem(194))
       ctx.fillText(textmain.substr(4, 2), that.rem(75 + 219 * t), that.rem(300), that.rem(100))
     }
-    ctx.save()
+    ctx.draw(true)
   },
   tostringLength(title, n, textmain, length, ctx, that) {
     //设置证书类型解释框
     ctx.setFillStyle('white')
-    ctx.save()
+    ctx.draw(true)
     ctx.drawImage(that.data.newList[4], that.rem(32), that.rem(550 + 130 * n), that.rem(160), that.rem(40))
-    // ctx.strokeRect(that.rem(32), that.rem(600 + 130 * n), that.rem(160), that.rem(40))
-    // ctx.fill()
-    ctx.save()
-
+    ctx.draw(true)
     ctx.setFontSize(that.rem(26))
     ctx.setTextAlign('center')
     ctx.setFillStyle('#2862AB')
-    ctx.save()
+    ctx.draw(true)
     ctx.fillText(title, that.rem(110), that.rem(578 + 130 * n), that.rem(150))
-    console.log(textmain.length / length)
     if (textmain.length / length > 1 && textmain.length / length < 2) {
       ctx.setTextAlign('left')
       ctx.setFillStyle('white')
@@ -862,13 +862,7 @@ Page({
       ctx.fillText(textmain.substr(3 * length, length), that.rem(210), that.rem(670 + 130 * n), that.rem(500))
     }
     ctx.drawImage(that.data.newList[5], that.rem(580), this.data.systemInfo.windowHeight - that.rem(210), that.rem(130), that.rem(180))
-    ctx.save()
-    // ctx.draw()
-    // ctx.setTextAlign('left')
-    // ctx.setFillStyle('white')
-    // ctx.fillText(textmain.substr(s * length, (s + 1) * length), that.rem(32 + 26 * s), that.rem(660), that.rem(550))
-    // s++
-
+    ctx.draw(true)
   },
   /**
    * 生命周期函数--监听页面显示
@@ -909,6 +903,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '一键分析本命证书',
+      path: '/page/index/index'
+    }
   }
 })

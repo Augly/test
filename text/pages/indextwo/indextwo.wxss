@@ -61,7 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 380rpx;
+  width: 258rpx;
   height: 70rpx;
   border: 2rpx solid rgba(56, 110, 194, 1);
   border-radius: 35rpx;
@@ -72,4 +72,38 @@
   color: rgba(56, 110, 194, 1);
   margin: 0 auto;
   margin-top: 67rpx;
+}
+
+#myCanvas {
+  position: fixed;
+  top: 0rpx;
+  left: 0;
+}
+
+.save {
+  position: fixed;
+  width: 206rpx;
+  height: 55rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 5rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 30rpx;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: rgba(53, 53, 61, 1);
+  line-height: 55rpx;
+  text-align: center;
+  bottom: 71rpx;
+  z-index: 999;
+}
+
+.erweima{
+position: fixed;
+  width: 128rpx;
+  height: 128rpx;
+  right: 34rpx;
+  bottom: 75rpx;
+  z-index: 999;
 }

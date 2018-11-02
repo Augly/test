@@ -1,11 +1,7 @@
 {
   "pages":[
     "pages/index/index",
-   "pages/indextwo/indextwo",
-    
-    
-    "pages/result/result",
-    "pages/logs/logs"
+   "pages/indextwo/indextwo"
   ],
   "window":{
     "backgroundTextStyle":"light",
