@@ -1,9 +1,10 @@
 {
   "pages":[
-    "pages/result/result",
     "pages/index/index",
-    "pages/indextwo/indextwo",
+   "pages/indextwo/indextwo",
     
+    
+    "pages/result/result",
     "pages/logs/logs"
   ],
   "window":{

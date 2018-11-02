@@ -1,16 +1,13 @@
-
-
-<image class='banner' src='../../utils/image/banner.jpg'>
-
-</image>
+<canvas canvas-id="myCanvas" wx-if="{{isShow}}" style="width:100%;box-sizing:border-box;height:{{systemInfo.windowHeight}}px;" />
+<image class='banner' src='../../utils/image/banner.jpg'></image>
 <view class='main' style="width:100%;height:{{mainHeight}}px;">
   <view class='mainWrap'>
-    <view class='list' wx:for="{{list}}" wx:key="{{index}}" bindtap='select' data-item='{{item}}' data-index="{{index}}">{{item}}
+    <view class='list' wx:for="{{list}}" wx:key="{{index}}" bindtap='select' data-item='{{item}}' data-index="{{index}}">
+      {{item}}
       <image class='selected' src='../../utils/image/select.png' wx:if="{{selectIndex==index}}"></image>
     </view>
   </view>
   <view class='title'>选择你就业的年限</view>
-  <view class='next' bindtap='next'>一键分析</view>
+  <view class='next' bindtap='next'>一键分析并保存截图</view>
 </view>
-<image class='foot' src='../../utils/image/foot_bg.png'>
-</image>
+<image class='foot' src='../../utils/image/foot_bg.png'></image>

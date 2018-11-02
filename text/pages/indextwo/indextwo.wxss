@@ -61,7 +61,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 258rpx;
+  width: 380rpx;
   height: 70rpx;
   border: 2rpx solid rgba(56, 110, 194, 1);
   border-radius: 35rpx;
