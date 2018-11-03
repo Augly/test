@@ -207,8 +207,8 @@ Page({
       ]
     } else if (this.data.result[0] == '财务主管/经理' && this.data.result[1] == '3-5年') {
       result = [{
-        title: 'CPA',
-        main: '注册会计师缩写，从事社会审计/中介审计/独立审计等专业人士优选证书，CPA为中国唯一官方认可的注册会计师资质，唯一拥有签字权的执业资质。'
+        title: 'CMA',
+        main: 'CMA即美国注册管理会计师，是美国管理会计师协会（IMA）旗下的注册管理会计师认证（CMA认证），同时被誉为财会界的Mini-MBA及美国财会领域的三大黄金认证之一，在全球范围内被企业财务高管所认可'
 
       }]
     } else if (this.data.result[0] == '预算专员/主管' && this.data.result[1] == '3-5年') {
@@ -665,8 +665,8 @@ Page({
         main: 'CMA即美国注册管理会计师，是美国管理会计师协会（IMA）旗下的注册管理会计师认证（CMA认证），同时被誉为财会界的Mini-MBA及美国财会领域的三大黄金认证之一，在全球范围内被企业财务高管所认可。'
 
       }, {
-        title: 'CFA',
-        main: '全称 特许注册金融分析师，是全球投资业里最为严格与高含金量资格认证，被称为金融第一考的考试，为全球投资业在道德操守、专业标准及知识体系等方面设立了规范与标准。'
+          title: 'CFP',
+          main: 'CFP国际金融理财师简称，全世界公认的金融理财行业权威等级证书。 广泛授予金融理财领域内的专业人员，包括理财经理、基金经理、财务总监、投资顾问、投资银行家、理财顾问等。'
 
       }]
     } else if (this.data.result[0] == '融资/外汇专员' && this.data.result[1] == '15年以上') {
@@ -750,8 +750,8 @@ Page({
   },
   erweima(){
     wx.previewImage({
-      current: 'https://fapiao.gaodun.com/Public/cma/wx.png', // 当前显示图片的http链接
-      urls: ['https://fapiao.gaodun.com/Public/cma/wx.png'] // 需要预览的图片http链接列表
+      current: '/utils/images/20181103113050.jpg', // 当前显示图片的http链接
+      urls: ['/utils/images/20181103113050.jpg'] // 需要预览的图片http链接列表
     })
   },
   save(){
@@ -809,7 +809,7 @@ Page({
   },
   drawtitle(ctx, textmain, t, that) {
     //根据奖状的名字长度设置奖状样式
-    ctx.drawImage(textmain.length > 3 ? that.data.newList[1] : that.data.newList[0], that.rem(60 + 219 * t), that.rem(200), that.rem(194), that.rem(132))
+    ctx.drawImage(textmain.length > 4 ? that.data.newList[1] : that.data.newList[0], that.rem(60 + 219 * t), that.rem(200), that.rem(194), that.rem(132))
     ctx.setTextAlign('left')
     ctx.setFillStyle('#2862AB')
     ctx.draw(true)
@@ -834,7 +834,7 @@ Page({
     ctx.setTextAlign('center')
     ctx.setFillStyle('#2862AB')
     ctx.draw(true)
-    ctx.fillText(title, that.rem(110), that.rem(578 + 130 * n), that.rem(150))
+    ctx.fillText(title, that.rem(110), that.rem(580 + 130 * n), that.rem(150))
     if (textmain.length / length > 1 && textmain.length / length < 2) {
       ctx.setTextAlign('left')
       ctx.setFillStyle('white')

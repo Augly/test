@@ -15,4 +15,4 @@
 </view>
 
 <cover-view class='save' wx:if="{{!isShow}}" bindtap='save'>{{savatext}}</cover-view>
-<cover-view class='erweima' wx:if="{{!isShow}}" bindtap='erweima'>{{savatext}}</cover-view>
+<cover-view class='erweima' wx:if="{{!isShow}}" bindtap='erweima'></cover-view>
