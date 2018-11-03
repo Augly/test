@@ -1,17 +1,17 @@
-<canvas canvas-id="myCanvas" id='myCanvas'  style="width:100%;box-sizing:border-box;height:{{systemInfo.windowHeight}}px;" />
+<canvas canvas-id="myCanvas" id='myCanvas' style="width:100%;box-sizing:border-box;height:{{systemInfo.windowHeight}}px;" />
 <view wx:if="{{isShow}}">
-<image class='banner' src='../../utils/image/banner.jpg'></image>
-<view class='main' style="width:100%;height:{{mainHeight}}px;">
-  <view class='mainWrap'>
-    <view class='list' wx:for="{{list}}" wx:key="{{index}}" bindtap='select' data-item='{{item}}' data-index="{{index}}">
-      {{item}}
-      <image class='selected' src='../../utils/image/select.png' wx:if="{{selectIndex==index}}"></image>
+  <image class='banner' src='../../utils/image/banner.jpg'></image>
+  <view class='main' style="width:100%;height:{{mainHeight}}px;">
+    <view class='mainWrap'>
+      <view class='list' wx:for="{{list}}" wx:key="{{index}}" bindtap='select' data-item='{{item}}' data-index="{{index}}">
+        {{item}}
+        <image class='selected' src='../../utils/image/select.png' wx:if="{{selectIndex==index}}"></image>
+      </view>
     </view>
+    <view class='title'>选择你就业的年限</view>
+    <view class='next' bindtap='next'>一键分析</view>
   </view>
-  <view class='title'>选择你就业的年限</view>
-  <view class='next' bindtap='next'>一键分析</view>
-</view>
-<image class='foot' src='../../utils/image/foot_bg.png'></image>
+  <image class='foot' src='../../utils/image/foot_bg.png'></image>
 </view>
 
 <cover-view class='save' wx:if="{{!isShow}}" bindtap='save'>{{savatext}}</cover-view>
